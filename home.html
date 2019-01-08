@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+        <title>Movies ratings</title>
+    </head>
+    <body>
+
+        <h1>Movies ratings</h1>
+
+        <div class="content">
+
+            <form id="add-movie-form"></form>
+
+            <ul id="movie-list"></ul>
+
+        </div>       
+        
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA8kGCka7G95WBJHnEHeNyVfNNOfFCUuvg",
+            authDomain: "movie-store-ccdd3.firebaseapp.com",
+            databaseURL: "https://movie-store-ccdd3.firebaseio.com",
+            projectId: "movie-store-ccdd3",
+            storageBucket: "movie-store-ccdd3.appspot.com",
+            messagingSenderId: "528076443328"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({timestampInSnapshots : true})
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
